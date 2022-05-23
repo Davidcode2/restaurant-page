@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url('./PlayfairDisplay-Regular.ttf');
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'PlayFairDisplay';
+}
+
+html {
+	background-image: url('./wp-mountain-clouds.jpg');
+}
+
+.test {
+}
+
+header {
+	display: grid;
+	grid-template: 45px 1fr / 1fr;
+}
+
+header > nav > ul {
+	display: flex;
+	justify-content: end;
+}
+li {
+	padding: 15px;
+	list-style:none;
+}
+
+.hero {
+	display: grid;
+	grid-template: 1fr / 1fr 4fr;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.hero > h1 {
+	padding: clamp(10px, 10%, 50px) clamp(10px, 10%, 50px) 260px clamp(10px, 10%, 50px);
+	margin-left: 25px;
+	background-color: slategray;
+}
+
+.hero-text {
+	position: absolute;
+	top: 40%;
+	left: 55%;
+	text-align:center;
+	transform: translate(-50%, -50%);
+}
+
+.hero > img {
+	width: 100%;
+}
+
+
