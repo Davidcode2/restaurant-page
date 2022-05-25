@@ -39,9 +39,9 @@ let loadMenuView = (() => {
 		dish_wrapper.appendChild(plateImg3);
 		dish_wrapper.appendChild(dishName);
 		menu_tiles.appendChild(dish_wrapper);
-		main_content.appendChild(menu_tiles);
-		menuWrapper.appendChild(main_content);
 	}
+	main_content.appendChild(menu_tiles);
+	menuWrapper.appendChild(main_content);
 
 })();
 
