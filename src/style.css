@@ -12,14 +12,20 @@
 
 html {
 	background-image: url('./wp-mountain-clouds.jpg');
+	background-repeat: no-repeat;
 }
 
-.test {
+::selection {
+	background: snow;
 }
 
 header {
 	display: grid;
 	grid-template: 51px 1fr / 1fr;
+}
+
+li::selection {
+	background: snow;
 }
 
 header > nav > ul {
@@ -37,27 +43,94 @@ li {
 
 .hero {
 	display: grid;
-	grid-template: 1fr / 1fr 4fr;
-	justify-content: space-around;
+	grid-template: 1fr / 1fr 3fr 1fr;
+	justify-items: center;
 	align-items: center;
 }
 
 .hero > h1 {
 	padding: clamp(10px, 10%, 50px) clamp(10px, 10%, 50px) 260px clamp(10px, 10%, 50px);
 	margin-left: 25px;
-	background-color: slategray;
+	background-color: RGBA(255, 250, 250, 0.15);
 }
 
 .hero-text {
-	position: absolute;
-	top: 40%;
-	left: 55%;
+	width: clamp(100px, 60%, 500px);
 	text-align:center;
-	transform: translate(-50%, -50%);
+}
+
+.tile-content {
+	margin-left: 100px;
+	margin-right: 100px;
+	grid-column-start: 2;
+	display: grid;
+	gap: 50px;
+	justify-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.main-content-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr
+}
+
+.lnBreak {
+	height: 1rem;
+}
+
+span {
+	background-color: snow;
+}
+span::selection {
+	background-color: darkgoldenrod;
+	color: black;
+}
+
+.contactInfo {
+	grid-column-start: 2;
+	text-align: center;
 }
 
 .hero > img {
 	width: 100%;
 }
 
+.dishImg-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.dish-title {
+	text-align: center;
+	padding: 0px;
+	flex: 1;
+	align-self: center;
+}
+
+.dishImg {
+	width: 10vw;
+	flex: 2;
+}
+
+@media screen and (max-width: 500px) {
+	.hero {
+	display: grid;
+	grid-template: 1fr / 1fr;
+	gap: 20px;
+	justify-items: center;
+	align-items: center;
+	}
+  .hero > h1 {
+	margin: 0px;
+	}
+	.tile-content {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.tile-content {
+	grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+}
 

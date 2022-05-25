@@ -6,10 +6,10 @@ let loadHeader = (tabSwitcherFunc) => {
 	let li2 = document.createElement('li');
 	let li3 = document.createElement('li');
 	li1.dataset.site = "menu";
-	li2.dataset.site = "order";
+	li2.dataset.site = "contact";
 	li3.dataset.site = "restaurant";
 	li1.textContent = "Menu";
-	li2.textContent = "Order";
+	li2.textContent = "Contact";
 	li3.textContent = "Restaurant";
 	li1.addEventListener('click', tabSwitcherFunc);
 	li2.addEventListener('click', tabSwitcherFunc);

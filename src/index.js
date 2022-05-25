@@ -2,14 +2,14 @@ import './style.css';
 import mountain_image from './wp-mountain-clouds.jpg';
 import { loadHeader } from './page.js';
 import * as mainView from './mainView.js';
-import * as orderView from './orderView.js';
+import * as contactView from './contactView.js';
 import * as restaurantView from './restaurantView.js';
 
 console.log("yay");
 const content = document.querySelector('#content');
 
-let menu = mainView.loadHero()
-let order = orderView.loadHero();
+let menu = mainView.menuWrapper;
+let contact = contactView.contactWrapper;
 let restaurant = restaurantView.loadHero();
 
 let tabSwitcher = (event) => {
